@@ -1,5 +1,9 @@
 # Changelog
 
+### Code Refactoring
+
+* test ([#25](https://github.com/michalby24/test-repo/issues/25)) ([0408add](https://github.com/michalby24/test-repo/commit/0408add8e5def6dbcffba2c02d34af31d357b918))
+
 ## 1.0.0-rc.7 (2026-01-07)
 
 
