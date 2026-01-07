@@ -74,7 +74,7 @@
     "prettier": "^3.5.3",
     "pretty-quick": "^4.1.1",
     "rimraf": "^6.0.1",
-    "supertest": "^7.1.0",
+    "supertest": "^7.2.2",
     "ts-jest": "^29.2.6",
     "tsc-alias": "^1.8.11",
     "typescript": "^5.8.2"
