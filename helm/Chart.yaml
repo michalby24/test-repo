@@ -2,8 +2,8 @@ apiVersion: v2
 name: ts-server-boilerplate
 description: A Helm chart for ts-server-boilerplate service
 type: application
-version: 1.0.0-rc.7
-appVersion: 1.0.0-rc.7
+version: 1.0.0-rc.16
+appVersion: 1.0.0-rc.16
 dependencies:
   - name: mclabels
     version: 1.0.1
