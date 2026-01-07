@@ -37,7 +37,7 @@
     "@map-colonies/openapi-express-viewer": "^4.0.0",
     "@map-colonies/read-pkg": "^1.0.0",
     "@map-colonies/schemas": "^1.9.0",
-    "@map-colonies/telemetry": "^10.0.1",
+    "@map-colonies/telemetry": "^10.1.0",
     "@opentelemetry/api": "^1.9.0",
     "compression": "^1.8.0",
     "express": "^4.21.2",
