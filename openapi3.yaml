@@ -2,7 +2,7 @@ openapi: 3.0.1
 info:
   title: service-name
   description: basic template for map colonies service
-  version: 1.0.0-rc.7
+  version: 2.0.0-rc.10
   license:
     name: MIT
     url: https://opensource.org/licenses/MIT
