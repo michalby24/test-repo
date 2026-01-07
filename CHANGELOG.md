@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0-rc.8](https://github.com/michalby24/test-repo/compare/service-name-v1.0.0-rc.7...service-name-v1.0.0-rc.8) (2026-01-07)
+
+
+### Miscellaneous Chores
+
+* enforce correct rc version ([b161695](https://github.com/michalby24/test-repo/commit/b161695d5c0692f54ae3647f77fc6c7e28f02cd7))
+
 ## 1.0.0-rc.7 (2026-01-07)
 
 
