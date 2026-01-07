@@ -1,9 +1,7 @@
 name: Push Artifacts to Azure Registry
 
 on:
-  push:
-    tags:
-      - 'v*'
+  workflow_dispatch:
 
 permissions:
   contents: write
