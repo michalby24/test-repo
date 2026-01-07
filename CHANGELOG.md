@@ -4,6 +4,22 @@
 
 * test ([#25](https://github.com/michalby24/test-repo/issues/25)) ([0408add](https://github.com/michalby24/test-repo/commit/0408add8e5def6dbcffba2c02d34af31d357b918))
 
+## [2.0.0-rc.7](https://github.com/michalby24/test-repo/compare/v1.0.0-rc.7...v2.0.0-rc.7) (2026-01-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* test ([#25](https://github.com/michalby24/test-repo/issues/25))
+
+### Bug Fixes
+
+* test 3 comments ([#13](https://github.com/michalby24/test-repo/issues/13)) ([f8a8b2c](https://github.com/michalby24/test-repo/commit/f8a8b2c7acca571ab5da9425aa1ae4d848cc13af))
+
+
+### Code Refactoring
+
+* test ([#25](https://github.com/michalby24/test-repo/issues/25)) ([0408add](https://github.com/michalby24/test-repo/commit/0408add8e5def6dbcffba2c02d34af31d357b918))
+
 ## 1.0.0-rc.7 (2026-01-07)
 
 
