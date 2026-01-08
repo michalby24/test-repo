@@ -1,0 +1,20 @@
+name: Test smart release-please action
+
+on:
+  push:
+      
+jobs:
+  test-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+
+      - name: Run smart release-please action tests
+        shell: bash
+        run: python3 actions/smart-release-please/test_rc_align.py

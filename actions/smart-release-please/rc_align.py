@@ -31,7 +31,7 @@ def find_baseline_tag():
 def get_commit_depth(baseline_tag):
     """
     Counts the number of 'user' commits since the baseline tag.
-    Filters out bot commits to prevent infinite loops.
+    Filters out bot commits AND release commits to prevent infinite loops.
     """
     rev_range = f"{baseline_tag}..HEAD" if baseline_tag else "HEAD"
     
@@ -39,12 +39,45 @@ def get_commit_depth(baseline_tag):
     if not raw_subjects:
         return 0
 
-    # Filter out bot commits
-    real_commits = [
-        s for s in raw_subjects.split('\n')
-        if BOT_FOOTER_TAG not in s and BOT_COMMIT_MSG not in s
+    # Define patterns to ignore
+    # 1. The bot footer we inject
+    # 2. The bot message we inject
+    # 3. Standard release-please commit messages (e.g., "chore(main): release 1.0.0-rc.1")
+    # 4. Merge commits from release-please branches
+    ignore_patterns = [
+        BOT_FOOTER_TAG,
+        BOT_COMMIT_MSG,
+        r"^chore\(.*\): release", 
+        r"^chore: release",
+        r"Merge pull request .*from .*release-please"
     ]
+
+    real_commits = []
+    for s in raw_subjects.split('\n'):
+        # Check if the commit matches any ignore pattern
+        if any(re.search(pat, s) or pat in s for pat in ignore_patterns):
+            continue
+        real_commits.append(s)
+
     return len(real_commits)
+
+# def get_commit_depth(baseline_tag):
+#     """
+#     Counts the number of 'user' commits since the baseline tag.
+#     Filters out bot commits to prevent infinite loops.
+#     """
+#     rev_range = f"{baseline_tag}..HEAD" if baseline_tag else "HEAD"
+    
+#     raw_subjects = run_git_command(["log", rev_range, "--first-parent", "--pretty=format:%s"], fail_on_error=False)
+#     if not raw_subjects:
+#         return 0
+
+#     # Filter out bot commits
+#     real_commits = [
+#         s for s in raw_subjects.split('\n')
+#         if BOT_FOOTER_TAG not in s and BOT_COMMIT_MSG not in s
+#     ]
+#     return len(real_commits)
 
 def parse_semver(tag):
     if not tag:
